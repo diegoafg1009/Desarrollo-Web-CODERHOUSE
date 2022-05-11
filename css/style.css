@@ -14,15 +14,16 @@
     align-items: center;
 }
 .header__navMenu{
+    flex-grow: 1;
     background-color: #83C5BE;
     font-size: 25px;
     font-family: 'Roboto', sans-serif;
-    width: 600px;
 }
 
 .header__navMenu ul{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 1.5rem;
 }
 
 .header__navMenu ul li{
@@ -30,7 +31,7 @@
 }
 
 .header__navMenu a{
-    color: aliceblue;
+    color: white;
     text-decoration: none;
 }
 
@@ -38,9 +39,12 @@
     background-color: #83C5BE;
 }
 
+.header__navIcons ul{
+    display: flex;
+}
+
 .header__navIcons ul li{
     list-style-type: none;
-    display: inline-block;
     margin: 5px;
 }
 
@@ -53,7 +57,7 @@
 
 .main{
     /* position: relative; */
-    background-image: url(../Images/Peach-Pit-2022.jpg);
+    background-image: url(../Images/peach-pit-2022.jpg);
     background-size: cover;
     background-position: center center;
     height: 100vh;
@@ -143,7 +147,7 @@
 .tourEvent{
     display: flex;
     justify-content: space-between;
-    margin: 16px;
+    padding: 16px 0px;
     border-bottom: 1px solid #232528;
 }
 
@@ -216,10 +220,16 @@
 .tracksAlbum__name{
     display: flex;
     justify-content: space-between;
-    margin: 16px;
+    padding: 16px 0px;
     border-bottom: 1px solid #232528;
 }
 /* Prensa */
+
+.tracksAlbum__name--noBorderBotton{
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0px;
+}
 
 .newsContainer{
     font-family: 'Raleway', sans-serif;
@@ -244,13 +254,12 @@
 
 .footer{
     background-color: #232528;
-    height: 130px;
-    overflow: hidden;
+    
+    
 }
 
 .footerContainer{
-    height: 20px;
-    margin: 55px 20px;
+    padding: 32px;
 }
 
 .footerContainer__copyright{
@@ -259,12 +268,4 @@
     text-align: center;
 }
 
-.prueba{
-    width: 80%;
-    height: 90%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    background-color: #FFDDD2;
-
-}
 
