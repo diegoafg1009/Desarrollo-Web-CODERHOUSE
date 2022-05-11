@@ -1,0 +1,270 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    /* Color rosa durazno */
+    /* background-color: #FFDDD2; */
+    /* Color turquesa */
+    background-color: #83C5BE;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__navMenu{
+    background-color: #83C5BE;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    width: 600px;
+}
+
+.header__navMenu ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__navMenu ul li{
+    list-style-type: none;
+}
+
+.header__navMenu a{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.header__navIcons{
+    background-color: #83C5BE;
+}
+
+.header__navIcons ul li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 5px;
+}
+
+.header__navIcons img{
+    height: 35px;
+    width: 35px;
+}
+
+/* Home main */
+
+.main{
+    /* position: relative; */
+    background-image: url(../Images/Peach-Pit-2022.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Home Body*/
+
+.logo{
+    margin: 20px 70px;
+    width: 600px;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.logo__text{
+    font-size: 100px;
+    color: #fea3ce;
+    text-shadow: 4px 4px #f46aa1;
+    font-family: 'Roboto', sans-serif;
+}
+
+.logo a{
+    font-family: 'Raleway', sans-serif;
+}
+
+.homeContent{
+    height: 40%;
+    display: flex;
+    flex-direction: row;
+}
+
+.form{
+    margin: 20px 70px;
+}
+
+.form__request{
+    font-family: 'Raleway', sans-serif;
+    color: aliceblue;
+}
+
+.form__request input{
+    font-family: 'Raleway', sans-serif;
+}
+
+.form__button--fontStyle{
+    font-family: 'Raleway', sans-serif;
+}
+
+.contactUs{
+    margin: 20px 70px;
+}
+
+.contactUs__title{
+    font-family: 'Raleway', sans-serif;
+    color: aliceblue;
+}
+
+.contactUs__content{
+    font-family: 'Raleway', sans-serif;
+    color: aliceblue;
+}
+
+/* Home Pages */
+
+.mainPages{
+    background-color: white;
+    height: 100vh;
+    margin-top: 80px;
+    margin-left: 160px;
+    margin-right: 160px;
+}
+
+/* Tour Body */
+
+.tourContainer{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Raleway', sans-serif;
+}
+.tourEvent{
+    display: flex;
+    justify-content: space-between;
+    margin: 16px;
+    border-bottom: 1px solid #232528;
+}
+
+
+
+/* Nosotros */
+
+.titlePage{
+    height: 200px;
+}
+.titlePage__text{
+    font-size: 80px;
+    color: #fea3ce;
+    text-shadow: 4px 4px #f46aa1;
+    font-family: 'Roboto', sans-serif;
+}
+
+.content{
+    display: flex;
+    
+    font-family: 'Raleway', sans-serif;
+}
+
+.content__text{
+    font-family: inherit;
+    padding-right: 120px;
+}
+
+
+.content__image img{
+    width: 600px;
+}
+
+/* Discografia */
+
+.album{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Raleway', sans-serif;
+}
+
+.album__content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.albumCover{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.albumCover img{
+    width: 600px;
+}
+
+.albumCover__listenOnSpotify{
+    margin-top: 20px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.tracksAlbum{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+}
+
+.tracksAlbum__name{
+    display: flex;
+    justify-content: space-between;
+    margin: 16px;
+    border-bottom: 1px solid #232528;
+}
+/* Prensa */
+
+.newsContainer{
+    font-family: 'Raleway', sans-serif;
+}
+
+.news{
+    display: flex;
+    align-items: center;
+    width: 500px;
+    margin-bottom: 100px;
+}
+
+.news__image img{
+    width: 300px;
+}
+.newsContent{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Footer */
+
+.footer{
+    background-color: #232528;
+    height: 130px;
+    overflow: hidden;
+}
+
+.footerContainer{
+    height: 20px;
+    margin: 55px 20px;
+}
+
+.footerContainer__copyright{
+    color:aliceblue;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+}
+
+.prueba{
+    width: 80%;
+    height: 90%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background-color: #FFDDD2;
+
+}
+
