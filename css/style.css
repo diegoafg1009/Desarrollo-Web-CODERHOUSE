@@ -1,10 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.header{
+.header {
     /* Color rosa durazno */
     /* background-color: #FFDDD2; */
     /* Color turquesa */
@@ -13,50 +13,54 @@
     justify-content: space-between;
     align-items: center;
 }
-.header__navMenu{
+
+.header__navMenu {
     flex-grow: 1;
     background-color: #83C5BE;
     font-size: 25px;
     font-family: 'Roboto', sans-serif;
 }
 
-.header__navMenu ul{
+.header__navMenu ul {
     display: flex;
     justify-content: center;
     gap: 1.5rem;
 }
 
-.header__navMenu ul li{
+.header__navMenu ul li {
     list-style-type: none;
 }
 
-.header__navMenu a{
+.header__navMenu a {
     color: white;
     text-decoration: none;
 }
 
-.header__navIcons{
+.header__navIcons {
     background-color: #83C5BE;
 }
 
-.header__navIcons ul{
+.header__navIcons ul {
     display: flex;
 }
 
-.header__navIcons ul li{
+.header__navIcons ul li {
     list-style-type: none;
     margin: 5px;
 }
 
-.header__navIcons img{
+.header__navIcons img {
     height: 35px;
     width: 35px;
 }
 
+.header_hamburgerButton {
+    display: none;
+}
+
 /* Home main */
 
-.main{
-    /* position: relative; */
+.main {
     background-image: url(../Images/peach-pit-2022.jpg);
     background-size: cover;
     background-position: center center;
@@ -67,9 +71,10 @@
     align-items: center;
 }
 
+
 /* Home Body*/
 
-.logo{
+.logo {
     margin: 20px 70px;
     width: 600px;
     height: 60%;
@@ -79,57 +84,59 @@
     justify-content: flex-end;
 }
 
-.logo__text{
+.logo__text {
     font-size: 100px;
     color: #fea3ce;
     text-shadow: 4px 4px #f46aa1;
     font-family: 'Roboto', sans-serif;
 }
 
-.logo a{
+.logo a {
     font-family: 'Raleway', sans-serif;
 }
 
-.homeContent{
+.homeContent {
     height: 40%;
     display: flex;
     flex-direction: row;
 }
 
-.form{
+.form {
     margin: 20px 70px;
 }
 
-.form__request{
+.form__request {
     font-family: 'Raleway', sans-serif;
     color: aliceblue;
 }
 
-.form__request input{
+.form__request input {
     font-family: 'Raleway', sans-serif;
 }
 
-.form__button--fontStyle{
+.form__button--fontStyle {
     font-family: 'Raleway', sans-serif;
 }
 
-.contactUs{
+.contactUs {
     margin: 20px 70px;
 }
 
-.contactUs__title{
+.contactUs__title {
     font-family: 'Raleway', sans-serif;
     color: aliceblue;
 }
 
-.contactUs__content{
+.contactUs__content {
     font-family: 'Raleway', sans-serif;
     color: aliceblue;
 }
 
-/* Home Pages */
 
-.mainPages{
+
+/* Pages */
+
+.mainPages {
     background-color: white;
     height: 100vh;
     margin-top: 80px;
@@ -139,12 +146,13 @@
 
 /* Tour Body */
 
-.tourContainer{
+.tourContainer {
     display: flex;
     flex-direction: column;
     font-family: 'Raleway', sans-serif;
 }
-.tourEvent{
+
+.tourEvent {
     display: flex;
     justify-content: space-between;
     padding: 16px 0px;
@@ -155,117 +163,332 @@
 
 /* Nosotros */
 
-.titlePage{
+.titlePage {
     height: 200px;
 }
-.titlePage__text{
+
+.titlePage__text {
     font-size: 80px;
     color: #fea3ce;
     text-shadow: 4px 4px #f46aa1;
     font-family: 'Roboto', sans-serif;
 }
 
-.content{
+.content {
     display: flex;
-    
+
     font-family: 'Raleway', sans-serif;
 }
 
-.content__text{
+.content__text {
     font-family: inherit;
     padding-right: 120px;
 }
 
 
-.content__image img{
+.content__image img {
     width: 600px;
 }
 
 /* Discografia */
 
-.album{
+.album {
     display: flex;
     flex-direction: column;
     font-family: 'Raleway', sans-serif;
 }
 
-.album__content{
+.album__content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
 }
 
-.albumCover{
+.albumCover {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.albumCover img{
+.albumCover img {
     width: 600px;
 }
 
-.albumCover__listenOnSpotify{
+.albumCover__listenOnSpotify {
     margin-top: 20px;
     font-family: 'Raleway', sans-serif;
 }
 
-.tracksAlbum{
+.tracksAlbum {
     display: flex;
     flex-direction: column;
     width: 600px;
 }
 
-.tracksAlbum__name{
+.tracksAlbum__name {
     display: flex;
     justify-content: space-between;
     padding: 16px 0px;
     border-bottom: 1px solid #232528;
 }
+
 /* Prensa */
 
-.tracksAlbum__name--noBorderBotton{
+.tracksAlbum__name--noBorderBotton {
     display: flex;
     justify-content: space-between;
     padding: 16px 0px;
 }
 
-.newsContainer{
+.newsContainer {
     font-family: 'Raleway', sans-serif;
+    display: grid;
+    grid-template-areas: "news news"
+        "news news";
 }
 
-.news{
+.news {
     display: flex;
     align-items: center;
     width: 500px;
     margin-bottom: 100px;
 }
 
-.news__image img{
+.news__image img {
     width: 300px;
 }
-.newsContent{
+
+.newsContent {
     display: flex;
     flex-direction: column;
 }
 
 /* Footer */
 
-.footer{
+.footer {
     background-color: #232528;
-    
-    
+
+
 }
 
-.footerContainer{
-    padding: 32px;
+.footerContainer {
+    padding: 32px 24px;
 }
 
-.footerContainer__copyright{
-    color:aliceblue;
+.footerContent__home--responsive {
+    display: none;
+}
+
+
+.footerContainer__copyright {
+    color: aliceblue;
     font-family: 'Raleway', sans-serif;
     text-align: center;
 }
 
+/*media query 768px*/
 
+@media screen and (max-width: 768px) {
+    /* header */
+
+    .header__navMenu {
+        display: none;
+    }
+
+    .header_hamburgerButton {
+        height: 26px;
+        width: 32px;
+        margin-right: 17px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .header__hamburguerButton--line1 {
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: white;
+        transform-origin: 0% 0%;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .header__hamburguerButton--line2 {
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: white;
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .header__hamburguerButton--line3 {
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: white;
+        transform-origin: 0% 100%;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .checkbox {
+        position: absolute;
+        display: block;
+        height: 32px;
+        width: 32px;
+        z-index: 5;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .header__hamburguerMenu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        visibility: hidden;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .header__hamburguerMenu>div {
+        background: #232528b0;
+        border-radius: 50%;
+        width: 200vw;
+        height: 200vw;
+        display: flex;
+        flex: none;
+        align-items: center;
+        justify-content: center;
+        transform: scale(0);
+        transition: all 0.4s ease;
+    }
+
+    .header__hamburguerMenu>div>nav {
+        text-align: center;
+        max-width: 90vw;
+        max-height: 100vh;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+    }
+
+    .header__hamburguerMenu>div>nav>ul>li {
+        list-style: none;
+        font-size: 24px;
+        /* font-weight: 900; */
+        padding: 16px;
+    }
+
+    .header__hamburguerMenu>div>nav>ul>li>a {
+        /* color: #232528; */
+        color: white;
+        text-decoration: none;
+    }
+
+
+
+    .header_hamburgerButton input[type="checkbox"]:checked~.header__hamburguerButton--line1 {
+        transform: rotate(45deg);
+    }
+
+    .header_hamburgerButton input[type="checkbox"]:checked~.header__hamburguerButton--line2 {
+        transform: scaleY(0);
+    }
+
+    .header_hamburgerButton input[type="checkbox"]:checked~.header__hamburguerButton--line3 {
+        transform: rotate(-45deg);
+    }
+
+    .header_hamburgerButton input[type="checkbox"]:checked~.header__hamburguerMenu {
+        visibility: visible;
+    }
+
+    .header_hamburgerButton input[type="checkbox"]:checked~.header__hamburguerMenu>div {
+        transform: scale(1);
+        transition-duration: 1s;
+    }
+
+    .header_hamburgerButton input[type="checkbox"]:checked~.header__hamburguerMenu>div>nav {
+        opacity: 1;
+        transition: opacity 0.4s ease 0.4s;
+    }
+
+
+
+}
+
+/*media query 600px*/
+
+@media screen and (max-width: 600px) {
+    .main {
+        background-image: url(../Images/peach-pit-2022.jpg);
+        background-size: cover;
+        background-position: center center;
+        height: 85vh;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo__text {
+        font-size: 85px;
+        color: #fea3ce;
+        text-shadow: 4px 4px #f46aa1;
+        font-family: 'Roboto', sans-serif;
+    }
+}
+
+/*media query 480px*/
+
+@media screen and (max-width: 480px) {
+    .main {
+        background-image: url(../Images/peach-pit-2022.jpg);
+        background-size: cover;
+        background-position: center center;
+        height: 60vh;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        width: auto;
+        height: 75%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .logo__text {
+        font-size: 45px;
+        color: #fea3ce;
+        text-shadow: 3px 3px #f46aa1;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .homeContent {
+        display: none;
+    }
+
+    .footerContent__home--responsive {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    
+
+}
