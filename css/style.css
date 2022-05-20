@@ -138,10 +138,29 @@
 
 .mainPages {
     background-color: white;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.mainPages--100vh {
+    background-color: white;
     height: 100vh;
     margin-top: 80px;
-    margin-left: 160px;
-    margin-right: 160px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.titlePage {
+    margin-bottom: 32px;
+}
+
+.titlePage__text {
+    font-size: 80px;
+    color: #fea3ce;
+    text-shadow: 4px 4px #f46aa1;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Tour Body */
@@ -163,16 +182,6 @@
 
 /* Nosotros */
 
-.titlePage {
-    height: 200px;
-}
-
-.titlePage__text {
-    font-size: 80px;
-    color: #fea3ce;
-    text-shadow: 4px 4px #f46aa1;
-    font-family: 'Roboto', sans-serif;
-}
 
 .content {
     display: flex;
@@ -201,29 +210,42 @@
 .album__content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .albumCover {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    width: 50%;
 }
 
-.albumCover img {
-    width: 600px;
+.albumCover__image {
+    width: 60%;
 }
 
 .albumCover__listenOnSpotify {
+    display: flex;
+    justify-content: center;
     margin-top: 20px;
-    font-family: 'Raleway', sans-serif;
+    width: 25%;
+    min-width: 160px;
+}
+
+.albumCover__button {
+    width: 90%;
+    transition: 1s;
+}
+
+.albumCover__button:hover {
+    width: 100%;
 }
 
 .tracksAlbum {
     display: flex;
     flex-direction: column;
-    width: 600px;
+    width: 50%;
 }
 
 .tracksAlbum__name {
@@ -285,6 +307,27 @@
     color: aliceblue;
     font-family: 'Raleway', sans-serif;
     text-align: center;
+}
+
+/* media query 1024px */
+
+@media screen and (max-width:1024px) {
+
+    /* pages */
+
+    .mainPages {
+        background-color: white;
+        margin-top: 64px;
+        margin-bottom: 64px;
+        margin-left: 8%;
+        margin-right: 8%;
+    }
+
+    /* discografia */
+
+    .albumCover {
+        width: 70%;
+    }
 }
 
 /*media query 768px*/
@@ -421,13 +464,49 @@
         transition: opacity 0.4s ease 0.4s;
     }
 
+    /* pages */
 
+    .mainPages {
+        background-color: white;
+        margin-top: 48px;
+        margin-bottom: 48px;
+    }
+
+    .titlePage__text {
+        font-size: 64px;
+        color: #fea3ce;
+        text-shadow: 3px 3px #f46aa1;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    /* discagrafia */
+
+    .album__content {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .albumCover {
+        width: 80%;
+    }
+
+    .albumCover__image {
+        width: 100%;
+    }
+
+    .tracksAlbum {
+        width: 100%;
+    }
 
 }
 
 /*media query 600px*/
 
 @media screen and (max-width: 600px) {
+
+    /* home */
+
     .main {
         background-image: url(../Images/peach-pit-2022.jpg);
         background-size: cover;
@@ -443,6 +522,21 @@
         font-size: 85px;
         color: #fea3ce;
         text-shadow: 4px 4px #f46aa1;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    /* pages */
+
+    .mainPages {
+        background-color: white;
+        margin-top: 32px;
+        margin-bottom: 32px;
+    }
+
+    .titlePage__text {
+        font-size: 48px;
+        color: #fea3ce;
+        text-shadow: 2.5px 2.5px #f46aa1;
         font-family: 'Roboto', sans-serif;
     }
 }
@@ -489,6 +583,17 @@
         margin-bottom: 20px;
     }
 
-    
+    /* pages */
+
+    .titlePage{
+        margin-bottom: 16px;
+    }
+
+    .titlePage__text {
+        font-size: 40px;
+        color: #fea3ce;
+        text-shadow: 2px 2px #f46aa1;
+        font-family: 'Roboto', sans-serif;
+    }
 
 }
