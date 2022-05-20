@@ -210,7 +210,8 @@
 .album__content {
     display: flex;
     justify-content: space-between;
-    margin-top: 40px;
+    margin-top: 20px;
+    margin-bottom: 40px;
 }
 
 .albumCover {
@@ -405,8 +406,8 @@
     .header__hamburguerMenu>div {
         background: #232528b0;
         border-radius: 50%;
-        width: 200vw;
-        height: 200vw;
+        width: 300vw;
+        height: 300vw;
         display: flex;
         flex: none;
         align-items: center;
