@@ -1,0 +1,571 @@
+//imports
+
+@import "utilities/variables";
+
+//nesting 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* header */
+
+.header {
+    background-color: $primary-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .header__navMenu{
+        flex-grow: 1;
+        font-size: 25px;
+        font-family: 'Roboto', sans-serif;
+        ul{
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 0px;
+            padding: 0px;
+            li{
+                list-style-type: none;
+                a{
+                    color: $alternative-text-color;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    .header__navIcons {
+        ul{
+            display: flex;
+            padding: 0px;
+            margin: 0px;
+            li{
+                display: inline-block;
+                list-style-type: none;
+                margin: 4px;
+            }
+        }
+        img{
+            height: 36px;
+            width: 36px;
+            display: block;
+        }
+    }
+    .header__hamburgerButton {
+        display: none;
+    }
+}
+
+/* Home main */
+
+.main{
+    background-image: url(../Images/peach-pit-2022.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Home Body*/
+
+.logo {
+    margin: 20px 70px;
+    width: 600px;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    .logo__text {
+        font-size: 100px;
+        color: $secundary-color;
+        text-shadow: 4px 4px $secundary-variant-color;
+        font-family: $title-font;
+    }
+    .logo__button{
+        font-family: $content-font;
+    }
+}
+
+.homeContent{
+    height: 40%;
+    display: flex;
+    flex-direction: row;   
+}
+
+.form{
+    margin: 20px 70px;
+    .form__request {
+        font-family: 'Raleway', sans-serif;
+        color: $alternative-text-color;
+        input{
+            font-family: inherit;
+        }
+    }
+    .form__button{
+        .form__buttonContent {
+            font-family: 'Raleway', sans-serif;
+        }
+    }
+}
+.contactUs{
+    margin: 20px 70px;
+    font-family: $content-font;
+    color: $alternative-text-color;
+    .contactUs__title {
+        font-family: inherit;
+        color: inherit;
+    }
+    .contactUs__content {
+        font-family: inherit;
+        color: inherit;
+    }
+}
+
+/* Pages */
+
+.mainPages {
+    background-color: white;
+    min-height: 90vh;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    margin-left: 16%;
+    margin-right: 16%;
+    .pageTitle {
+        margin-bottom: 32px;
+        .pageTitle__text {
+            font-size: 80px;
+            color: $secundary-color;
+            text-shadow: 4px 4px $secundary-variant-color;
+            font-family: $title-font;
+            font-weight: bold;
+            line-height: normal;
+        }
+    }
+}
+
+/* Tour */
+.tourContainer{
+    font-family: $content-font;
+    div {
+        .tourContainer__dates{
+            margin-bottom: 8px;
+        }
+    }
+    .tourEvent{
+        padding: 16px 8px;
+        .tourEvent__text{
+            margin-bottom: 0px;
+        }
+        .tourEvent__button{
+            margin-left: 16px;
+        }
+    }
+}
+/* Nosotros */
+.content{
+    display: flex;
+    font-family: $content-font;
+    .content__text{
+        font-family: inherit;
+        width: 50%;
+    }
+    .content__image{
+        display: flex;
+        width: 50%;
+        justify-content: flex-end;
+        align-items: center;
+        img{
+            width: 70%;
+        }
+    }
+}
+/* Discografia*/
+.album {
+    display: flex;
+    flex-direction: column;
+    font-family: $content-font;
+    .album__content{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        .albumCover{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            .albumCover__image {
+                width: 60%;
+            }
+            .albumCover__listenOnSpotify {
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
+                width: 25%;
+                min-width: 160px;
+            }
+            .albumCover__button {
+                width: 90%;
+                transition: 1s;
+                &:hover{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .tracksAlbum {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        .tracksAlbum__name {
+            display: flex;
+            justify-content: space-between;
+            padding: 16px 0px;
+            border-bottom: 1px solid $complemetary-color;
+        }
+        .tracksAlbum__name--noBorderBotton {
+            display: flex;
+            justify-content: space-between;
+            padding: 16px 0px;
+        }
+    }
+}
+
+/* Prensa */
+.newsContainer {
+    font-family: $content-font;
+    display: grid;
+    grid-template-areas: "news news"
+                        "news news";
+    .news{
+        display: flex;
+        align-items: center;
+        width: 500px;
+        margin-bottom: 100px;
+        .news__image{
+            img{
+                width: 300px;
+            }
+        }
+        .news__content{
+            display: hidden;
+            flex-direction: row;
+            .news__contentTitle{
+                text-align: center;
+            }
+        }
+    }
+}
+
+/* Footer */
+
+.footer {
+    background-color: $complemetary-color;
+    .footerContainer {
+        padding: 32px 24px;
+        .footerContent__home--responsive {
+            display: none;
+        }
+        .footerContainer__copyright{
+            color: $alternative-text-color;
+            font-family: $content-font;
+            text-align: center;
+        }
+    }
+}
+
+/* media query 1200px */
+
+@media screen and (max-width:1200px){
+    .mainPages{
+        margin-left: 12%;
+        margin-right: 12%;
+    }
+}
+
+/* media query 1024px */
+
+@media screen and (max-width:1024px) {
+
+    /* pages */
+
+    .mainPages {
+        background-color: $background-color;
+        margin-top: 64px;
+        margin-bottom: 64px;
+        margin-left: 8%;
+        margin-right: 8%;
+    }    
+
+    /* discografia */
+
+    .album{
+        .album__content{
+            .albumCover {
+                width: 70%;
+            }
+        }
+    }
+}
+
+/*media query 768px*/
+
+@media screen and (max-width:768px){
+
+    /* header */
+
+    .header{
+        .header__navMenu{
+            display: none;
+        }
+        .header__hamburgerButton{
+            height: 26px;
+            width: 32px;
+            margin-right: 17px;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .checkbox {
+                position: absolute;
+                display: block;
+                height: 32px;
+                width: 32px;
+                z-index: 5;
+                opacity: 0;
+                cursor: pointer;
+            }
+            .header__hamburguerButton--line1 {
+                display: block;
+                height: 4px;
+                width: 100%;
+                border-radius: 10px;
+                background: $alternative-text-color;
+                transform-origin: 0% 0%;
+                transition: transform 0.4s ease-in-out;
+            }
+            .header__hamburguerButton--line2 {
+                display: block;
+                height: 4px;
+                width: 100%;
+                border-radius: 10px;
+                background: $alternative-text-color;
+                transition: transform 0.2s ease-in-out;
+            }
+            .header__hamburguerButton--line3 {
+                display: block;
+                height: 4px;
+                width: 100%;
+                border-radius: 10px;
+                background: $alternative-text-color;
+                transform-origin: 0% 100%;
+                transition: transform 0.4s ease-in-out;
+            }
+            .header__hamburguerMenu {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                visibility: hidden;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: $content-font;
+                >div {
+                    background: #232528b0;
+                    border-radius: 50%;
+                    width: 300vw;
+                    height: 300vw;
+                    display: flex;
+                    flex: none;
+                    align-items: center;
+                    justify-content: center;
+                    transform: scale(0);
+                    transition: all 0.4s ease;
+                    >nav {
+                        text-align: center;
+                        max-width: 90vw;
+                        max-height: 100vh;
+                        opacity: 0;
+                        transition: opacity 0.4s ease;
+                        >ul {
+                            >li {
+                                list-style: none;
+                                font-size: 24px;
+                                padding: 16px;
+                                >a {
+                                    color: $alternative-text-color;
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            input[type="checkbox"]:checked {
+                ~.header__hamburguerButton--line1{
+                    transform: rotate(45deg);
+                }
+                ~.header__hamburguerButton--line2 {
+                    transform: scaleY(0);
+                }
+                ~.header__hamburguerButton--line3 {
+                    transform: rotate(-45deg);
+                }
+                ~.header__hamburguerMenu {
+                    visibility: visible;
+                    >div{
+                        transform: scale(1);
+                        transition-duration: 1s;
+                        >nav {
+                            opacity: 1;
+                            transition: opacity 0.4s ease 0.4s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* pages */
+
+    .mainPages {
+        margin-top: 48px;
+        margin-bottom: 48px;
+        .pageTitle{
+            .pageTitle__text{
+                font-size: 64px;
+                text-shadow: 3px 3px $secundary-variant-color;
+            }
+        }
+    }
+     /* discagrafia */
+
+    .album{
+        .album__content{
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            .albumCover{
+                width: 80%;
+                .albumCover__image{
+                    width: 100%;
+                }
+            }
+            .tracksAlbum{
+                width: 100%;
+            }
+        }
+    }
+} 
+
+/*media query 768px*/
+
+@media screen and (max-width:600px){
+
+    /* home */
+
+    .main {
+        background-image: url(../Images/peach-pit-2022.jpg);
+        background-size: cover;
+        background-position: center center;
+        height: 85vh;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .logo {
+            .logo__text {
+                font-size: 85px;
+                text-shadow: 4px 4px $secundary-variant-color;
+            }
+        }
+    }
+
+    /* pages */
+
+    .mainPages {
+        background-color: $background-color;
+        margin-top: 32px;
+        margin-bottom: 32px;
+        .pageTitle {
+            .pageTitle__text {
+                font-size: 48px;
+                text-shadow: 2.5px 2.5px $secundary-variant-color;
+            }
+        }
+
+        /* tour */
+
+        .tourContainer{
+            .tourEvent{
+                .tourEvent__details{
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+            }
+        }
+    }
+}
+
+/*media query 480px*/
+
+@media screen and (max-width: 480px){
+
+    /* home */
+
+    .main {
+        height: 60vh;
+    }
+
+    .logo {
+        width: auto;
+        height: 75%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        .logo__text {
+            font-size: 45px;
+            text-shadow: 3px 3px $secundary-variant-color;
+        }
+    }
+    .homeContent{
+        display: none;
+    }
+
+    /* pages */
+
+    .mainPages{
+        .pageTitle{
+            margin-bottom: 16px;
+            .pageTitle__text{
+                font-size: 40px;
+                text-shadow: 2px 2px $secundary-variant-color;
+            }
+        }
+    }
+
+    /* footer */
+
+    .footer {
+        .footerContainer {
+            .footerContent__home--responsive {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

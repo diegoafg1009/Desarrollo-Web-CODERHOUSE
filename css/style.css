@@ -1,432 +1,292 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
+/* header */
 .header {
-    /* Color rosa durazno */
-    /* background-color: #FFDDD2; */
-    /* Color turquesa */
-    background-color: #83C5BE;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.header__navMenu {
+  background-color: #83C5BE;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .header .header__navMenu {
     flex-grow: 1;
-    background-color: #83C5BE;
     font-size: 25px;
-    font-family: 'Roboto', sans-serif;
-}
-
-.header__navMenu ul {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin: 0px;
-    padding: 0px;
-}
-
-.header__navMenu ul li {
-    list-style-type: none;
-}
-
-.header__navMenu ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-.header__navIcons {
-    background-color: #83C5BE;
-}
-
-.header__navIcons ul {
+    font-family: 'Roboto', sans-serif; }
+    .header .header__navMenu ul {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 0px;
+      padding: 0px; }
+      .header .header__navMenu ul li {
+        list-style-type: none; }
+        .header .header__navMenu ul li a {
+          color: white;
+          text-decoration: none; }
+  .header .header__navIcons ul {
     display: flex;
     padding: 0px;
-    margin: 0px;
-}
-
-.header__navIcons ul li {
-    display: inline-block;
-    list-style-type: none;
-    margin: 4px;
-    height: available;
-}
-
-.header__navIcons img {
+    margin: 0px; }
+    .header .header__navIcons ul li {
+      display: inline-block;
+      list-style-type: none;
+      margin: 4px; }
+  .header .header__navIcons img {
     height: 36px;
     width: 36px;
-    display: block;
-}
-
-.header_hamburgerButton {
-    display: none;
-}
+    display: block; }
+  .header .header__hamburgerButton {
+    display: none; }
 
 /* Home main */
-
 .main {
-    background-image: url(../Images/peach-pit-2022.jpg);
-    background-size: cover;
-    background-position: center center;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
+  background-image: url(../Images/peach-pit-2022.jpg);
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
 
 /* Home Body*/
-
 .logo {
-    margin: 20px 70px;
-    width: 600px;
-    height: 60%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-.logo__text {
+  margin: 20px 70px;
+  width: 600px;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end; }
+  .logo .logo__text {
     font-size: 100px;
     color: #fea3ce;
     text-shadow: 4px 4px #f46aa1;
-    font-family: 'Roboto', sans-serif;
-}
-
-.logo a {
-    font-family: 'Raleway', sans-serif;
-}
+    font-family: "Roboto", sans-serif; }
+  .logo .logo__button {
+    font-family: "Raleway", sans-serif; }
 
 .homeContent {
-    height: 40%;
-    display: flex;
-    flex-direction: row;
-}
+  height: 40%;
+  display: flex;
+  flex-direction: row; }
 
 .form {
-    margin: 20px 70px;
-}
-
-.form__request {
+  margin: 20px 70px; }
+  .form .form__request {
     font-family: 'Raleway', sans-serif;
-    color: aliceblue;
-}
-
-.form__request input {
-    font-family: 'Raleway', sans-serif;
-}
-
-.form__button--fontStyle {
-    font-family: 'Raleway', sans-serif;
-}
+    color: white; }
+    .form .form__request input {
+      font-family: inherit; }
+  .form .form__button .form__buttonContent {
+    font-family: 'Raleway', sans-serif; }
 
 .contactUs {
-    margin: 20px 70px;
-}
-
-.contactUs__title {
-    font-family: 'Raleway', sans-serif;
-    color: aliceblue;
-}
-
-.contactUs__content {
-    font-family: 'Raleway', sans-serif;
-    color: aliceblue;
-}
-
-
+  margin: 20px 70px;
+  font-family: "Raleway", sans-serif;
+  color: white; }
+  .contactUs .contactUs__title {
+    font-family: inherit;
+    color: inherit; }
+  .contactUs .contactUs__content {
+    font-family: inherit;
+    color: inherit; }
 
 /* Pages */
-
 .mainPages {
-    background-color: white;
-    min-height: 90vh;
-    margin-top: 80px;
-    margin-bottom: 80px;
-    margin-left: 16%;
-    margin-right: 16%;
-}
+  background-color: white;
+  min-height: 90vh;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  margin-left: 16%;
+  margin-right: 16%; }
+  .mainPages .pageTitle {
+    margin-bottom: 32px; }
+    .mainPages .pageTitle .pageTitle__text {
+      font-size: 80px;
+      color: #fea3ce;
+      text-shadow: 4px 4px #f46aa1;
+      font-family: "Roboto", sans-serif;
+      font-weight: bold;
+      line-height: normal; }
 
-.pageTitle {
-    margin-bottom: 32px;
-}
-
-.pageTitle__text {
-    font-size: 80px;
-    color: #fea3ce;
-    text-shadow: 4px 4px #f46aa1;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    line-height: normal;
-}
-
-/* Tour Body */
-
-
-.tourContainer__dates{
-    margin-bottom: 8px;
-}
-
-.tourContainer{
-    font-family: 'Raleway', sans-serif;
-}
-
-.tourEvent{
-    padding: 16px 8px;
-}
-
-.tourContainer__text{
-    margin-bottom: 0px;
-}
-
-.tourEvent__button{
-    margin-left: 16px;
-}
+/* Tour */
+.tourContainer {
+  font-family: "Raleway", sans-serif; }
+  .tourContainer div .tourContainer__dates {
+    margin-bottom: 8px; }
+  .tourContainer .tourEvent {
+    padding: 16px 8px; }
+    .tourContainer .tourEvent .tourEvent__text {
+      margin-bottom: 0px; }
+    .tourContainer .tourEvent .tourEvent__button {
+      margin-left: 16px; }
 
 /* Nosotros */
-
-
 .content {
-    display: flex;
-    font-family: 'Raleway', sans-serif;
-}
-
-.content__text {
+  display: flex;
+  font-family: "Raleway", sans-serif; }
+  .content .content__text {
     font-family: inherit;
-    width: 50%;
-}
-
-
-.content__image{
+    width: 50%; }
+  .content .content__image {
     display: flex;
     width: 50%;
     justify-content: flex-end;
-    align-items: center;
-}
+    align-items: center; }
+    .content .content__image img {
+      width: 70%; }
 
-.content__image img{
-    width: 70%;
-}
-
-/* Discografia */
-
+/* Discografia*/
 .album {
-    display: flex;
-    flex-direction: column;
-    font-family: 'Raleway', sans-serif;
-}
-
-.album__content {
+  display: flex;
+  flex-direction: column;
+  font-family: "Raleway", sans-serif; }
+  .album .album__content {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
-    margin-bottom: 40px;
-}
-
-.albumCover {
+    margin-bottom: 40px; }
+    .album .album__content .albumCover {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 50%; }
+      .album .album__content .albumCover .albumCover__image {
+        width: 60%; }
+      .album .album__content .albumCover .albumCover__listenOnSpotify {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        width: 25%;
+        min-width: 160px; }
+      .album .album__content .albumCover .albumCover__button {
+        width: 90%;
+        transition: 1s; }
+        .album .album__content .albumCover .albumCover__button:hover {
+          width: 100%; }
+  .album .tracksAlbum {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-}
-
-.albumCover__image {
-    width: 60%;
-}
-
-.albumCover__listenOnSpotify {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    width: 25%;
-    min-width: 160px;
-}
-
-.albumCover__button {
-    width: 90%;
-    transition: 1s;
-}
-
-.albumCover__button:hover {
-    width: 100%;
-}
-
-.tracksAlbum {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-}
-
-.tracksAlbum__name {
-    display: flex;
-    justify-content: space-between;
-    padding: 16px 0px;
-    border-bottom: 1px solid #232528;
-}
+    width: 50%; }
+    .album .tracksAlbum .tracksAlbum__name {
+      display: flex;
+      justify-content: space-between;
+      padding: 16px 0px;
+      border-bottom: 1px solid #232528; }
+    .album .tracksAlbum .tracksAlbum__name--noBorderBotton {
+      display: flex;
+      justify-content: space-between;
+      padding: 16px 0px; }
 
 /* Prensa */
-
-.tracksAlbum__name--noBorderBotton {
-    display: flex;
-    justify-content: space-between;
-    padding: 16px 0px;
-}
-
 .newsContainer {
-    font-family: 'Raleway', sans-serif;
-    display: grid;
-    grid-template-areas: "news news"
-        "news news";
-}
-
-.news {
+  font-family: "Raleway", sans-serif;
+  display: grid;
+  grid-template-areas: "news news" "news news"; }
+  .newsContainer .news {
     display: flex;
     align-items: center;
     width: 500px;
-    margin-bottom: 100px;
-}
-
-.news__image img {
-    width: 300px;
-}
-
-.newsContent {
-    display: flex;
-    flex-direction: column;
-}
+    margin-bottom: 100px; }
+    .newsContainer .news .news__image img {
+      width: 300px; }
+    .newsContainer .news .news__content {
+      display: hidden;
+      flex-direction: row; }
+      .newsContainer .news .news__content .news__contentTitle {
+        text-align: center; }
 
 /* Footer */
-
 .footer {
-    background-color: #232528;
-
-
-}
-
-.footerContainer {
-    padding: 32px 24px;
-}
-
-.footerContent__home--responsive {
-    display: none;
-}
-
-
-.footerContainer__copyright {
-    color: aliceblue;
-    font-family: 'Raleway', sans-serif;
-    text-align: center;
-}
+  background-color: #232528; }
+  .footer .footerContainer {
+    padding: 32px 24px; }
+    .footer .footerContainer .footerContent__home--responsive {
+      display: none; }
+    .footer .footerContainer .footerContainer__copyright {
+      color: white;
+      font-family: "Raleway", sans-serif;
+      text-align: center; }
 
 /* media query 1200px */
-
-@media screen and (max-width:1200px){
-    .mainPages{
-        margin-left: 12%;
-        margin-right: 12%;
-    }
-}
+@media screen and (max-width: 1200px) {
+  .mainPages {
+    margin-left: 12%;
+    margin-right: 12%; } }
 
 /* media query 1024px */
-
-@media screen and (max-width:1024px) {
-
-    /* pages */
-
-    .mainPages {
-        background-color: white;
-        margin-top: 64px;
-        margin-bottom: 64px;
-        margin-left: 8%;
-        margin-right: 8%;
-    }
-
-    /* discografia */
-
-    .albumCover {
-        width: 70%;
-    }
-}
+@media screen and (max-width: 1024px) {
+  /* pages */
+  .mainPages {
+    background-color: white;
+    margin-top: 64px;
+    margin-bottom: 64px;
+    margin-left: 8%;
+    margin-right: 8%; }
+  /* discografia */
+  .album .album__content .albumCover {
+    width: 70%; } }
 
 /*media query 768px*/
-
 @media screen and (max-width: 768px) {
-    /* header */
-
-    .header__navMenu {
-        display: none;
-    }
-
-    .header_hamburgerButton {
-        height: 26px;
-        width: 32px;
-        margin-right: 17px;
-        z-index: 2;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .header__hamburguerButton--line1 {
-        display: block;
-        height: 4px;
-        width: 100%;
-        border-radius: 10px;
-        background: white;
-        transform-origin: 0% 0%;
-        transition: transform 0.4s ease-in-out;
-    }
-
-    .header__hamburguerButton--line2 {
-        display: block;
-        height: 4px;
-        width: 100%;
-        border-radius: 10px;
-        background: white;
-        transition: transform 0.2s ease-in-out;
-    }
-
-    .header__hamburguerButton--line3 {
-        display: block;
-        height: 4px;
-        width: 100%;
-        border-radius: 10px;
-        background: white;
-        transform-origin: 0% 100%;
-        transition: transform 0.4s ease-in-out;
-    }
-
-    .checkbox {
-        position: absolute;
-        display: block;
-        height: 32px;
-        width: 32px;
-        z-index: 5;
-        opacity: 0;
-        cursor: pointer;
-    }
-
-    .header__hamburguerMenu {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        visibility: hidden;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: 'Roboto', sans-serif;
-    }
-
-    .header__hamburguerMenu>div {
+  /* header */
+  .header .header__navMenu {
+    display: none; }
+  .header .header__hamburgerButton {
+    height: 26px;
+    width: 32px;
+    margin-right: 17px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .header .header__hamburgerButton .checkbox {
+      position: absolute;
+      display: block;
+      height: 32px;
+      width: 32px;
+      z-index: 5;
+      opacity: 0;
+      cursor: pointer; }
+    .header .header__hamburgerButton .header__hamburguerButton--line1 {
+      display: block;
+      height: 4px;
+      width: 100%;
+      border-radius: 10px;
+      background: white;
+      transform-origin: 0% 0%;
+      transition: transform 0.4s ease-in-out; }
+    .header .header__hamburgerButton .header__hamburguerButton--line2 {
+      display: block;
+      height: 4px;
+      width: 100%;
+      border-radius: 10px;
+      background: white;
+      transition: transform 0.2s ease-in-out; }
+    .header .header__hamburgerButton .header__hamburguerButton--line3 {
+      display: block;
+      height: 4px;
+      width: 100%;
+      border-radius: 10px;
+      background: white;
+      transform-origin: 0% 100%;
+      transition: transform 0.4s ease-in-out; }
+    .header .header__hamburgerButton .header__hamburguerMenu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      visibility: hidden;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Raleway", sans-serif; }
+      .header .header__hamburgerButton .header__hamburguerMenu > div {
         background: #232528b0;
         border-radius: 50%;
         width: 300vw;
@@ -436,195 +296,108 @@
         align-items: center;
         justify-content: center;
         transform: scale(0);
-        transition: all 0.4s ease;
-    }
-
-    .header__hamburguerMenu>div>nav {
-        text-align: center;
-        max-width: 90vw;
-        max-height: 100vh;
-        opacity: 0;
-        transition: opacity 0.4s ease;
-    }
-
-    .header__hamburguerMenu>div>nav>ul>li {
-        list-style: none;
-        font-size: 24px;
-        /* font-weight: 900; */
-        padding: 16px;
-    }
-
-    .header__hamburguerMenu>div>nav>ul>li>a {
-        /* color: #232528; */
-        color: white;
-        text-decoration: none;
-    }
-
-
-
-    .header_hamburgerButton input[type="checkbox"]:checked~.header__hamburguerButton--line1 {
-        transform: rotate(45deg);
-    }
-
-    .header_hamburgerButton input[type="checkbox"]:checked~.header__hamburguerButton--line2 {
-        transform: scaleY(0);
-    }
-
-    .header_hamburgerButton input[type="checkbox"]:checked~.header__hamburguerButton--line3 {
-        transform: rotate(-45deg);
-    }
-
-    .header_hamburgerButton input[type="checkbox"]:checked~.header__hamburguerMenu {
-        visibility: visible;
-    }
-
-    .header_hamburgerButton input[type="checkbox"]:checked~.header__hamburguerMenu>div {
+        transition: all 0.4s ease; }
+        .header .header__hamburgerButton .header__hamburguerMenu > div > nav {
+          text-align: center;
+          max-width: 90vw;
+          max-height: 100vh;
+          opacity: 0;
+          transition: opacity 0.4s ease; }
+          .header .header__hamburgerButton .header__hamburguerMenu > div > nav > ul > li {
+            list-style: none;
+            font-size: 24px;
+            padding: 16px; }
+            .header .header__hamburgerButton .header__hamburguerMenu > div > nav > ul > li > a {
+              color: white;
+              text-decoration: none; }
+    .header .header__hamburgerButton input[type="checkbox"]:checked ~ .header__hamburguerButton--line1 {
+      transform: rotate(45deg); }
+    .header .header__hamburgerButton input[type="checkbox"]:checked ~ .header__hamburguerButton--line2 {
+      transform: scaleY(0); }
+    .header .header__hamburgerButton input[type="checkbox"]:checked ~ .header__hamburguerButton--line3 {
+      transform: rotate(-45deg); }
+    .header .header__hamburgerButton input[type="checkbox"]:checked ~ .header__hamburguerMenu {
+      visibility: visible; }
+      .header .header__hamburgerButton input[type="checkbox"]:checked ~ .header__hamburguerMenu > div {
         transform: scale(1);
-        transition-duration: 1s;
-    }
+        transition-duration: 1s; }
+        .header .header__hamburgerButton input[type="checkbox"]:checked ~ .header__hamburguerMenu > div > nav {
+          opacity: 1;
+          transition: opacity 0.4s ease 0.4s; }
+  /* pages */
+  .mainPages {
+    margin-top: 48px;
+    margin-bottom: 48px; }
+    .mainPages .pageTitle .pageTitle__text {
+      font-size: 64px;
+      text-shadow: 3px 3px #f46aa1; }
+  /* discagrafia */
+  .album .album__content {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; }
+    .album .album__content .albumCover {
+      width: 80%; }
+      .album .album__content .albumCover .albumCover__image {
+        width: 100%; }
+    .album .album__content .tracksAlbum {
+      width: 100%; } }
 
-    .header_hamburgerButton input[type="checkbox"]:checked~.header__hamburguerMenu>div>nav {
-        opacity: 1;
-        transition: opacity 0.4s ease 0.4s;
-    }
-
-    /* pages */
-
-    .mainPages {
-        background-color: white;
-        margin-top: 48px;
-        margin-bottom: 48px;
-    }
-
-    .pageTitle__text {
-        font-size: 64px;
-        color: #fea3ce;
-        text-shadow: 3px 3px #f46aa1;
-        font-family: 'Roboto', sans-serif;
-    }
-
-    /* discagrafia */
-
-    .album__content {
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-
-    .albumCover {
-        width: 80%;
-    }
-
-    .albumCover__image {
-        width: 100%;
-    }
-
-    .tracksAlbum {
-        width: 100%;
-    }
-
-}
-
-/*media query 600px*/
-
+/*media query 768px*/
 @media screen and (max-width: 600px) {
-
-    /* home */
-
-    .main {
-        background-image: url(../Images/peach-pit-2022.jpg);
-        background-size: cover;
-        background-position: center center;
-        height: 85vh;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .logo__text {
-        font-size: 85px;
-        color: #fea3ce;
-        text-shadow: 4px 4px #f46aa1;
-        font-family: 'Roboto', sans-serif;
-    }
-
-    /* pages */
-
-    .mainPages {
-        background-color: white;
-        margin-top: 32px;
-        margin-bottom: 32px;
-    }
-
-    .pageTitle__text {
-        font-size: 48px;
-        color: #fea3ce;
-        text-shadow: 2.5px 2.5px #f46aa1;
-        font-family: 'Roboto', sans-serif;
-    }
-
-    /* tour */
-
-    .tourEvent__details{
-        flex-direction: column;
-        align-items: flex-start;
-    }
-}
+  /* home */
+  .main {
+    background-image: url(../Images/peach-pit-2022.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 85vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .main .logo .logo__text {
+      font-size: 85px;
+      text-shadow: 4px 4px #f46aa1; }
+  /* pages */
+  .mainPages {
+    background-color: white;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    /* tour */ }
+    .mainPages .pageTitle .pageTitle__text {
+      font-size: 48px;
+      text-shadow: 2.5px 2.5px #f46aa1; }
+    .mainPages .tourContainer .tourEvent .tourEvent__details {
+      flex-direction: column;
+      align-items: flex-start; } }
 
 /*media query 480px*/
-
 @media screen and (max-width: 480px) {
-    .main {
-        background-image: url(../Images/peach-pit-2022.jpg);
-        background-size: cover;
-        background-position: center center;
-        height: 60vh;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .logo {
-        width: auto;
-        height: 75%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-end;
-    }
-
-    .logo__text {
-        font-size: 45px;
-        color: #fea3ce;
-        text-shadow: 3px 3px #f46aa1;
-        font-family: 'Roboto', sans-serif;
-    }
-
-    .homeContent {
-        display: none;
-    }
-
-    .footerContent__home--responsive {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    /* pages */
-
-    .pageTitle{
-        margin-bottom: 16px;
-    }
-
-    .pageTitle__text {
-        font-size: 40px;
-        color: #fea3ce;
-        text-shadow: 2px 2px #f46aa1;
-        font-family: 'Roboto', sans-serif;
-    }
-
-}
+  /* home */
+  .main {
+    height: 60vh; }
+  .logo {
+    width: auto;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end; }
+    .logo .logo__text {
+      font-size: 45px;
+      text-shadow: 3px 3px #f46aa1; }
+  .homeContent {
+    display: none; }
+  /* pages */
+  .mainPages .pageTitle {
+    margin-bottom: 16px; }
+    .mainPages .pageTitle .pageTitle__text {
+      font-size: 40px;
+      text-shadow: 2px 2px #f46aa1; }
+  /* footer */
+  .footer .footerContainer .footerContent__home--responsive {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 20px; } }
