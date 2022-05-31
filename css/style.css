@@ -12,7 +12,8 @@
   .header .header__navMenu {
     flex-grow: 1;
     font-size: 25px;
-    font-family: 'Roboto', sans-serif; }
+    font-family: 'Roboto', sans-serif;
+    line-height: normal; }
     .header .header__navMenu ul {
       display: flex;
       justify-content: center;
@@ -31,11 +32,12 @@
     .header .header__navIcons ul li {
       display: inline-block;
       list-style-type: none;
-      margin: 4px; }
-  .header .header__navIcons img {
-    height: 36px;
-    width: 36px;
-    display: block; }
+      margin: 4px;
+      padding: 2px; }
+      .header .header__navIcons ul li a img {
+        height: 32px;
+        width: 32px;
+        display: block; }
   .header .header__hamburgerButton {
     display: none; }
 

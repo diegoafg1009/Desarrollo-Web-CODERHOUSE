@@ -21,6 +21,7 @@
         flex-grow: 1;
         font-size: 25px;
         font-family: 'Roboto', sans-serif;
+        line-height: normal;
         ul{
             display: flex;
             justify-content: center;
@@ -45,13 +46,17 @@
                 display: inline-block;
                 list-style-type: none;
                 margin: 4px;
+                padding: 2px;
+                a{
+                    img{
+                        height: 32px;
+                        width: 32px;
+                        display: block;
+                    }
+                }
             }
-        }
-        img{
-            height: 36px;
-            width: 36px;
-            display: block;
-        }
+        }   
+        
     }
     .header__hamburgerButton {
         display: none;
