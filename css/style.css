@@ -9,6 +9,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  .header .header__logo {
+    margin-left: 8px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding: 2px; }
+    .header .header__logo img {
+      height: 32px;
+      display: block; }
   .header .header__navMenu {
     flex-grow: 1;
     font-size: 25px;
@@ -208,6 +216,8 @@
     padding: 32px 24px; }
     .footer .footerContainer .footerContent__home--responsive {
       display: none; }
+    .footer .footerContainer .footerContainer__socialIcons {
+      display: none; }
     .footer .footerContainer .footerContainer__copyright {
       color: white;
       font-family: "Raleway", sans-serif;
@@ -221,21 +231,10 @@
 
 /* media query 1024px */
 @media screen and (max-width: 1024px) {
-  /* pages */
-  .mainPages {
-    background-color: white;
-    margin-top: 64px;
-    margin-bottom: 64px;
-    margin-left: 8%;
-    margin-right: 8%; }
-  /* discografia */
-  .album .album__content .albumCover {
-    width: 70%; } }
-
-/*media query 768px*/
-@media screen and (max-width: 768px) {
   /* header */
   .header .header__navMenu {
+    display: none; }
+  .header .header__navIcons {
     display: none; }
   .header .header__hamburgerButton {
     height: 26px;
@@ -326,6 +325,31 @@
         .header .header__hamburgerButton input[type="checkbox"]:checked ~ .header__hamburguerMenu .header__hamburguerMenuContainer .header__hamburguerMenuContainerItems {
           opacity: 1;
           transition: opacity 0.4s ease 0.4s; }
+  /* pages */
+  .mainPages {
+    background-color: white;
+    margin-top: 64px;
+    margin-bottom: 64px;
+    margin-left: 8%;
+    margin-right: 8%; }
+  /* discografia */
+  .album .album__content .albumCover {
+    width: 70%; }
+  /* footer */
+  .footer .footerContainer .footerContainer__socialIcons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; }
+    .footer .footerContainer .footerContainer__socialIcons a {
+      margin: 4px;
+      padding: 2px; }
+      .footer .footerContainer .footerContainer__socialIcons a img {
+        height: 32px;
+        width: 32px;
+        display: block; } }
+
+/*media query 768px*/
+@media screen and (max-width: 768px) {
   /* pages */
   .mainPages {
     margin-top: 48px;
