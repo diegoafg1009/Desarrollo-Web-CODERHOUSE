@@ -144,7 +144,7 @@
 
 .mainPages {
     background-color: white;
-    min-height: 90vh;
+    min-height: 85vh;
     margin-top: 80px;
     margin-bottom: 80px;
     margin-left: 16%;
@@ -181,20 +181,26 @@
     }
 }
 /* Nosotros */
-.content{
+.aboutUsContainer{
     display: flex;
     font-family: $content-font;
-    .content__text{
+    align-items: center;
+    gap: 32px;
+    padding-bottom: 32px;
+    .aboutUsContainer__content{
         font-family: inherit;
         width: 50%;
+        .aboutUsContainer__contentText{
+            font-size: 24px;
+        }
     }
-    .content__image{
+    .aboutUsContainer__image{
         display: flex;
         width: 50%;
         justify-content: flex-end;
         align-items: center;
         img{
-            width: 70%;
+            width: 100%;
         }
     }
 }
@@ -253,25 +259,44 @@
 
 /* Prensa */
 .newsContainer {
+    padding:0% 5%;
     font-family: $content-font;
     display: grid;
+    column-gap: 8px;
     grid-template-areas: "news news"
                         "news news";
     .news{
         display: flex;
         align-items: center;
-        width: 500px;
         margin-bottom: 100px;
+        gap: 12px;
         .news__image{
+            width: 45%;
+            min-width: 170px;
+            position: relative;
+            &:after{
+                content: "";
+                display: block;
+                padding-bottom: 100%;
+            }
             img{
-                width: 300px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
             }
         }
         .news__content{
-            display: hidden;
-            flex-direction: row;
+            width: 55%;
             .news__contentTitle{
-                text-align: center;
+                text-align: left;
+            }
+            .news__contentText{
+                text-align: left;
             }
         }
     }
@@ -303,6 +328,10 @@
     .mainPages{
         margin-left: 12%;
         margin-right: 12%;
+    }
+
+    .newsContainer{
+        padding: 0% 2.5%;
     }
 }
 
@@ -464,6 +493,57 @@
             }
         }
     }
+
+    /* news */
+
+    .newsContainer{
+        padding: 0%;
+        .news{
+            .news__image{
+                width: 50%;
+            }
+            .news__content{
+                width: 50%;
+            }
+        }
+
+    }
+}
+
+/*media query 900px*/
+
+@media screen and (max-width:900px){
+    /* nosotros */
+
+    .aboutUsContainer{
+        flex-direction: column;
+        .aboutUsContainer__content{
+            width: 100%;
+        }
+        .aboutUsContainer__image{
+            width: 100%;
+            max-width: 450px;
+        }
+    }
+
+
+    /* news */
+    
+    .newsContainer{
+        .news{
+            .news__content{
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 9;
+                overflow: hidden;
+                .news__contentTitle{
+                    h2{
+                            font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 /*media query 768px*/
@@ -481,6 +561,7 @@
             }
         }
     }
+
      /* discagrafia */
 
     .album{
@@ -497,6 +578,21 @@
             .tracksAlbum{
                 width: 100%;
             }
+        }
+    }
+
+    /* news */
+
+    .newsContainer{
+        grid-template-areas: "news"
+                            "news"
+                            "news"
+                            "news";
+        padding: 0% 10%;
+        justify-content: center;
+        .news{
+            margin-bottom: 50px;
+            max-width: 450px;
         }
     }
 } 
@@ -542,7 +638,22 @@
         }
     }
 
+    /* nosotros */
 
+    .aboutUsContainer{
+        .aboutUsContainer__content{
+            .aboutUsContainer__contentText{
+                font-size: 20px;
+            }
+        }
+    }
+
+
+    /* news */
+
+    .newsContainer{
+        padding: 0% 5%;
+    }
 }
 
 /*media query 480px*/
@@ -594,4 +705,11 @@
             }
         }
     }
+
+    /* news */
+
+    .newsContainer{
+        padding: 0%;
+    }
+
 }

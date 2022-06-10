@@ -107,7 +107,7 @@
 /* Pages */
 .mainPages {
   background-color: white;
-  min-height: 90vh;
+  min-height: 85vh;
   margin-top: 80px;
   margin-bottom: 80px;
   margin-left: 16%;
@@ -135,19 +135,24 @@
       margin-left: 16px; }
 
 /* Nosotros */
-.content {
+.aboutUsContainer {
   display: flex;
-  font-family: "Raleway", sans-serif; }
-  .content .content__text {
+  font-family: "Raleway", sans-serif;
+  align-items: center;
+  gap: 32px;
+  padding-bottom: 32px; }
+  .aboutUsContainer .aboutUsContainer__content {
     font-family: inherit;
     width: 50%; }
-  .content .content__image {
+    .aboutUsContainer .aboutUsContainer__content .aboutUsContainer__contentText {
+      font-size: 24px; }
+  .aboutUsContainer .aboutUsContainer__image {
     display: flex;
     width: 50%;
     justify-content: flex-end;
     align-items: center; }
-    .content .content__image img {
-      width: 70%; }
+    .aboutUsContainer .aboutUsContainer__image img {
+      width: 100%; }
 
 /* Discografia*/
 .album {
@@ -194,21 +199,39 @@
 
 /* Prensa */
 .newsContainer {
+  padding: 0% 5%;
   font-family: "Raleway", sans-serif;
   display: grid;
+  column-gap: 8px;
   grid-template-areas: "news news" "news news"; }
   .newsContainer .news {
     display: flex;
     align-items: center;
-    width: 500px;
-    margin-bottom: 100px; }
-    .newsContainer .news .news__image img {
-      width: 300px; }
+    margin-bottom: 100px;
+    gap: 12px; }
+    .newsContainer .news .news__image {
+      width: 45%;
+      min-width: 170px;
+      position: relative; }
+      .newsContainer .news .news__image:after {
+        content: "";
+        display: block;
+        padding-bottom: 100%; }
+      .newsContainer .news .news__image img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; }
     .newsContainer .news .news__content {
-      display: hidden;
-      flex-direction: row; }
+      width: 55%; }
       .newsContainer .news .news__content .news__contentTitle {
-        text-align: center; }
+        text-align: left; }
+      .newsContainer .news .news__content .news__contentText {
+        text-align: left; }
 
 /* Footer */
 .footer {
@@ -228,7 +251,9 @@
 @media screen and (max-width: 1200px) {
   .mainPages {
     margin-left: 12%;
-    margin-right: 12%; } }
+    margin-right: 12%; }
+  .newsContainer {
+    padding: 0% 2.5%; } }
 
 /* media query 1024px */
 @media screen and (max-width: 1024px) {
@@ -337,7 +362,33 @@
       .footer .footerContainer .footerContainer__socialIcons a img {
         height: 32px;
         width: 32px;
-        display: block; } }
+        display: block; }
+  /* news */
+  .newsContainer {
+    padding: 0%; }
+    .newsContainer .news .news__image {
+      width: 50%; }
+    .newsContainer .news .news__content {
+      width: 50%; } }
+
+/*media query 900px*/
+@media screen and (max-width: 900px) {
+  /* nosotros */
+  .aboutUsContainer {
+    flex-direction: column; }
+    .aboutUsContainer .aboutUsContainer__content {
+      width: 100%; }
+    .aboutUsContainer .aboutUsContainer__image {
+      width: 100%;
+      max-width: 450px; }
+  /* news */
+  .newsContainer .news .news__content {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 9;
+    overflow: hidden; }
+    .newsContainer .news .news__content .news__contentTitle h2 {
+      font-size: 20px; } }
 
 /*media query 768px*/
 @media screen and (max-width: 768px) {
@@ -358,7 +409,15 @@
       .album .album__content .albumCover .albumCover__image {
         width: 100%; }
     .album .album__content .tracksAlbum {
-      width: 100%; } }
+      width: 100%; }
+  /* news */
+  .newsContainer {
+    grid-template-areas: "news" "news" "news" "news";
+    padding: 0% 10%;
+    justify-content: center; }
+    .newsContainer .news {
+      margin-bottom: 50px;
+      max-width: 450px; } }
 
 /*media query 600px*/
 @media screen and (max-width: 600px) {
@@ -378,7 +437,13 @@
   /* tour */
   .tourContainer .tourEvent .tourEvent__details {
     flex-direction: column;
-    align-items: flex-start; } }
+    align-items: flex-start; }
+  /* nosotros */
+  .aboutUsContainer .aboutUsContainer__content .aboutUsContainer__contentText {
+    font-size: 20px; }
+  /* news */
+  .newsContainer {
+    padding: 0% 5%; } }
 
 /*media query 480px*/
 @media screen and (max-width: 480px) {
@@ -409,4 +474,7 @@
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
-    margin-bottom: 20px; } }
+    margin-bottom: 20px; }
+  /* news */
+  .newsContainer {
+    padding: 0%; } }
