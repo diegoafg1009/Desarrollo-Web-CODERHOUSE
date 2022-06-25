@@ -740,12 +740,6 @@
                 gap: 20px;
                 .form{
                     width: 70%;
-                    .form__button{
-                        .form__buttonContent {
-                            @include button($background-color, $text-color, 1px, $primary-color, $alternative-text-color, $focus: true);
-                            font-size: 16px;    
-                        }
-                    }
                 }
                 .contactUs{
                     width: 70%;
