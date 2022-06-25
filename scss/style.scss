@@ -45,6 +45,9 @@
                 a{
                     color: $alternative-text-color;
                     text-decoration: none;
+                    &:hover{
+                        border-bottom: 3px solid $alternative-text-color;
+                    }
                 }
             }
         }
@@ -83,51 +86,65 @@
     background-position: center center;
     height: 100vh;
     overflow: hidden;
-    @include flex-column-center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0% 5%;
+    gap: 4%;
 }
 
 /* Home Body*/
 
 .logo {
-    margin: 20px 70px;
-    width: 600px;
-    height: 60%;
     @include flex-column-center;
-    justify-content: flex-end;
     .logo__text {
         font-size: 100px;
         color: $secundary-color;
         text-shadow: 4px 4px $secundary-variant-color;
         font-family: $title-font;
     }
-    .logo__button{
-        font-family: $content-font;
+    a{
+        .logo__button{
+            @include button(transparent, $alternative-text-color, 3px, rgba($primary-color, .5), $alternative-text-color, $focus: false);
+            text-decoration: none;
+            font-weight: bolder;
+            font-size: 18px;
+        }
     }
 }
 
 .homeContent{
-    height: 40%;
     display: flex;
-    flex-direction: row;   
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
 }
-
 .form{
-    margin: 20px 70px;
+    width: 45%;
     .form__request {
-        font-family: 'Raleway', sans-serif;
+        font-family: $content-font;
         color: $alternative-text-color;
+        label{
+            font-size: 24px;
+            font-weight: bolder;
+        }
         input{
+            padding: 2px 4px;
+            width: 100%;
             font-family: inherit;
         }
     }
     .form__button{
+        text-align: center;
         .form__buttonContent {
-            font-family: 'Raleway', sans-serif;
+            @include button($background-color, $text-color, 1px, $primary-color, $alternative-text-color, $focus: true);
+            font-size: 16px;
         }
     }
 }
 .contactUs{
-    margin: 20px 70px;
+    width: 45%;
     font-family: $content-font;
     color: $alternative-text-color;
     .contactUs__title {
@@ -143,7 +160,8 @@
 /* Pages */
 
 .mainPages {
-    background-color: white;
+    color: $text-color;
+    background-color: $background-color;
     min-height: 85vh;
     margin-top: 80px;
     margin-bottom: 80px;
@@ -161,6 +179,7 @@
         }
     }
 }
+
 
 /* Tour */
 .tourContainer{
@@ -229,12 +248,9 @@
                 margin-top: 20px;
                 width: 25%;
                 min-width: 160px;
-            }
-            .albumCover__button {
-                width: 90%;
+                .albumCover__button {
+                width: 100%;
                 transition: 1s;
-                &:hover{
-                    width: 100%;
                 }
             }
         }
@@ -294,6 +310,10 @@
             width: 55%;
             .news__contentTitle{
                 text-align: left;
+                a{
+                    color: $text-color;
+                    text-decoration: none;
+                }
             }
             .news__contentText{
                 text-align: left;
@@ -321,6 +341,22 @@
         }
     }
 }
+
+/* media query hover */
+/* hara que el hover solo funcione con dispositivos sin touch*/
+
+@media (hover: hover) {
+    .album{
+        .albumCover {
+            .albumCover__button {
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+
 
 /* media query 1200px */
 
@@ -699,9 +735,21 @@
             .footerContent__home--responsive {
                 display: flex;
                 flex-direction: column;
-                align-items: flex-start;
-                width: 100%;
+                align-items: center;
                 margin-bottom: 20px;
+                gap: 20px;
+                .form{
+                    width: 70%;
+                    .form__button{
+                        .form__buttonContent {
+                            @include button($background-color, $text-color, 1px, $primary-color, $alternative-text-color, $focus: true);
+                            font-size: 16px;    
+                        }
+                    }
+                }
+                .contactUs{
+                    width: 70%;
+                }
             }
         }
     }

@@ -5,7 +5,7 @@
 
 /* header */
 .header {
-  background-color: #83C5BE;
+  background-color: #83c5be;
   display: flex;
   justify-content: space-between;
   align-items: center; }
@@ -34,6 +34,8 @@
         .header .header__navMenu ul li a {
           color: white;
           text-decoration: none; }
+          .header .header__navMenu ul li a:hover {
+            border-bottom: 3px solid white; }
   .header .header__navIcons ul {
     display: flex;
     padding: 0px;
@@ -59,42 +61,83 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  justify-content: center;
+  padding: 0% 5%;
+  gap: 4%; }
 
 /* Home Body*/
 .logo {
-  margin: 20px 70px;
-  width: 600px;
-  height: 60%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: flex-end; }
+  align-items: center; }
   .logo .logo__text {
     font-size: 100px;
     color: #fea3ce;
     text-shadow: 4px 4px #f46aa1;
     font-family: "Roboto", sans-serif; }
-  .logo .logo__button {
-    font-family: "Raleway", sans-serif; }
+  .logo a .logo__button {
+    font-family: "Raleway", sans-serif;
+    background-color: transparent;
+    border: 3px solid white;
+    color: white;
+    margin-top: 4px;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.2s;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 18px; }
+    .logo a .logo__button:hover, .logo a .logo__button:active {
+      border: 3px solid rgba(131, 197, 190, 0.5);
+      background-color: rgba(131, 197, 190, 0.5);
+      color: white; }
 
 .homeContent {
-  height: 40%;
   display: flex;
-  flex-direction: row; }
+  flex-direction: row;
+  justify-content: center;
+  gap: 40px; }
 
 .form {
-  margin: 20px 70px; }
+  width: 45%; }
   .form .form__request {
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
     color: white; }
+    .form .form__request label {
+      font-size: 24px;
+      font-weight: bolder; }
     .form .form__request input {
+      padding: 2px 4px;
+      width: 100%;
       font-family: inherit; }
-  .form .form__button .form__buttonContent {
-    font-family: 'Raleway', sans-serif; }
+  .form .form__button {
+    text-align: center; }
+    .form .form__button .form__buttonContent {
+      font-family: "Raleway", sans-serif;
+      background-color: white;
+      border: 1px solid #212529;
+      color: #212529;
+      margin-top: 4px;
+      padding: 6px 12px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      transition: 0.2s;
+      cursor: pointer;
+      font-size: 16px; }
+      .form .form__button .form__buttonContent:hover, .form .form__button .form__buttonContent:active {
+        border: 1px solid #83c5be;
+        background-color: #83c5be;
+        color: white; }
+      .form .form__button .form__buttonContent:focus {
+        box-shadow: 0px 0px 0px 4px rgba(131, 197, 190, 0.5); }
 
 .contactUs {
-  margin: 20px 70px;
+  width: 45%;
   font-family: "Raleway", sans-serif;
   color: white; }
   .contactUs .contactUs__title {
@@ -106,6 +149,7 @@
 
 /* Pages */
 .mainPages {
+  color: #212529;
   background-color: white;
   min-height: 85vh;
   margin-top: 80px;
@@ -178,11 +222,9 @@
         margin-top: 20px;
         width: 25%;
         min-width: 160px; }
-      .album .album__content .albumCover .albumCover__button {
-        width: 90%;
-        transition: 1s; }
-        .album .album__content .albumCover .albumCover__button:hover {
-          width: 100%; }
+        .album .album__content .albumCover .albumCover__listenOnSpotify .albumCover__button {
+          width: 100%;
+          transition: 1s; }
   .album .tracksAlbum {
     display: flex;
     flex-direction: column;
@@ -191,7 +233,7 @@
       display: flex;
       justify-content: space-between;
       padding: 16px 0px;
-      border-bottom: 1px solid #232528; }
+      border-bottom: 1px solid #212529; }
     .album .tracksAlbum .tracksAlbum__name--noBorderBotton {
       display: flex;
       justify-content: space-between;
@@ -230,12 +272,15 @@
       width: 55%; }
       .newsContainer .news .news__content .news__contentTitle {
         text-align: left; }
+        .newsContainer .news .news__content .news__contentTitle a {
+          color: #212529;
+          text-decoration: none; }
       .newsContainer .news .news__content .news__contentText {
         text-align: left; }
 
 /* Footer */
 .footer {
-  background-color: #232528; }
+  background-color: #212529; }
   .footer .footerContainer {
     padding: 32px 24px; }
     .footer .footerContainer .footerContent__home--responsive {
@@ -246,6 +291,12 @@
       color: white;
       font-family: "Raleway", sans-serif;
       text-align: center; }
+
+/* media query hover */
+/* hara que el hover solo funcione con dispositivos sin touch*/
+@media (hover: hover) {
+  .album .albumCover .albumCover__button:hover {
+    transform: scale(1.1); } }
 
 /* media query 1200px */
 @media screen and (max-width: 1200px) {
@@ -472,9 +523,32 @@
   .footer .footerContainer .footerContent__home--responsive {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    margin-bottom: 20px; }
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 20px; }
+    .footer .footerContainer .footerContent__home--responsive .form {
+      width: 70%; }
+      .footer .footerContainer .footerContent__home--responsive .form .form__button .form__buttonContent {
+        font-family: "Raleway", sans-serif;
+        background-color: white;
+        border: 1px solid #212529;
+        color: #212529;
+        margin-top: 4px;
+        padding: 6px 12px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        transition: 0.2s;
+        cursor: pointer;
+        font-size: 16px; }
+        .footer .footerContainer .footerContent__home--responsive .form .form__button .form__buttonContent:hover, .footer .footerContainer .footerContent__home--responsive .form .form__button .form__buttonContent:active {
+          border: 1px solid #83c5be;
+          background-color: #83c5be;
+          color: white; }
+        .footer .footerContainer .footerContent__home--responsive .form .form__button .form__buttonContent:focus {
+          box-shadow: 0px 0px 0px 4px rgba(131, 197, 190, 0.5); }
+    .footer .footerContainer .footerContent__home--responsive .contactUs {
+      width: 70%; }
   /* news */
   .newsContainer {
     padding: 0%; } }

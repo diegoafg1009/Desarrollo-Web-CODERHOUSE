@@ -1,5 +1,30 @@
-@mixin  flex-column-center{
+@mixin flex-column-center {
     display: flex;
     flex-direction: column;
     align-items: center;
- }
+}
+
+@mixin button($bkgd, $color, $borderSize, $hoverBkgd, $hoverColor, $focus: false) {
+    font-family: $content-font;
+    background-color: $bkgd;
+    border: $borderSize solid $color;
+    color: $color;
+    margin-top: 4px;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.2s;
+    cursor: pointer;
+
+    &:hover, &:active {
+        border: $borderSize solid $hoverBkgd;
+        background-color: $hoverBkgd;
+        color: $hoverColor;
+    }
+    @if $focus{
+        &:focus{
+            box-shadow: 0px 0px 0px 4px rgba($hoverBkgd, .5);
+        }
+    }
+}
